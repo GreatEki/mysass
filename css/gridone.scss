@@ -1,0 +1,30 @@
+.wrapper {
+	display: grid;
+	// grid-template-columns: 2fr 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1em;
+	grid-auto-rows: minmax(
+		100px,
+		fit-content
+	); //This allows us to implicitly specify the height of each grid item
+
+	> div {
+		background: #eee;
+		padding: 1em;
+	}
+
+	div:nth-child(odd) {
+		background: #ddd;
+	}
+
+	.nested {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 0.5em;
+
+		div {
+			border: 1px solid black;
+			padding: 0.5em;
+		}
+	}
+}

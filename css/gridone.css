@@ -1,0 +1,32 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, -webkit-fit-content);
+  grid-auto-rows: minmax(100px, fit-content);
+}
+
+.wrapper > div {
+  background: #eee;
+  padding: 1em;
+}
+
+.wrapper div:nth-child(odd) {
+  background: #ddd;
+}
+
+.wrapper .nested {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+}
+
+.wrapper .nested div {
+  border: 1px solid black;
+  padding: 0.5em;
+}
+/*# sourceMappingURL=gridone.css.map */
