@@ -61,7 +61,7 @@ header a {
 main {
 	@include desktop {
 		display: grid;
-		grid-template-columns: 50% auto;
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas: 'primary card';
 	}
 
