@@ -11,6 +11,8 @@ $colors: (
 
 // Sass VARIABLES
 $myColor: #005dff;
+$padding: 15px;
+$borders: 15px;
 
 body,
 html {
@@ -28,5 +30,25 @@ body {
 		height: 100%;
 		position: absolute;
 		z-index: -1;
+	}
+}
+
+header a {
+	color: #fff;
+	padding: $padding;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+main {
+	section#card {
+		background: #fff;
+		padding: 20px;
+		margin: 1em auto;
+		border-radius: $borders;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		//box-shadow: Xvalue(right$left), Yvalue(top$bottom), blur-radius(the extent to which we blur), color
+		width: 80%;
 	}
 }
