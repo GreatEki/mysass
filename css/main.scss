@@ -1,6 +1,7 @@
 // sass MAPS
 $colors: (
 	primary: #005dff,
+	primary-light: lighten(#005dff, 40%),
 	accent: #fff6bb,
 );
 
@@ -20,11 +21,12 @@ html {
 }
 
 body {
-	font-family: 'Montserrat';
+	font-family: sans-serif;
 	margin: 0;
 
 	#bg {
-		background-color: map-get($colors, primary);
+		// background-color: map-get($colors, primary);
+		background-color: color(primary);
 		clip-path: polygon(100% 0, 100% 64%, 66% 100%, 0 100%, 0 0);
 		width: 100%;
 		height: 100%;
@@ -50,5 +52,30 @@ main {
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 		//box-shadow: Xvalue(right$left), Yvalue(top$bottom), blur-radius(the extent to which we blur), color
 		width: 80%;
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin-bottom: 10px;
+
+				span {
+					position: absolute;
+					width: 30px;
+					height: 30px;
+					background-color: color(primary-light);
+					border-radius: 50%;
+					margin-right: 10px;
+				}
+
+				strong {
+					display: inline-block;
+					margin-left: max(40px);
+					margin-top: 10px;
+				}
+			}
+		}
 	}
 }
